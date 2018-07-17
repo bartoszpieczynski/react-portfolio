@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+
+h2 {
+  font-size: 5rem;
+  flex: 100%;
+  text-align: center;
+  align-self: flex-start;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid rgba(255, 166, 0);
+  margin-bottom: 0;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  color: orange;
+}
+
+@media only screen and (min-width: 112.5em){   
+  html {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (max-width: 75em){   
+  html {
+    font-size: 56.25%
+  }
+}
+
+@media only screen and (max-width: 56.25em){   
+  html {
+    font-size: 50%;
+  }
+}

@@ -1,0 +1,51 @@
+.Modal {
+   position: fixed;
+   z-index: 500;
+   background-color: white;
+   width: 50%;
+   border: 1px solid #ccc;
+   box-shadow: 2px 2px 5px orange;
+   padding: 16px;
+   left: 25%;
+   top: 30%;
+   box-sizing: border-box;
+   transition: all 0.3s ease-out;
+}
+
+.modalText {
+   font-size: 2.3rem;
+   text-align: center;
+   white-space: pre-line;
+}
+
+.Container {
+   position: relative;
+   height: 100%;
+   width: 100%;
+}
+
+.Cross {
+   position: absolute;
+   right: 10px;
+   top: -40px;
+   width: 32px;
+   height: 32px;
+   opacity: 0.3;
+   cursor: pointer;
+}
+
+.Cross:before, .Cross:after {
+   position: absolute;
+   left: 15px;
+   content: ' ';
+   height: 33px;
+   width: 2px;
+   background-color: #333;
+ }
+
+.Cross:before {
+   transform: rotate(45deg);
+ }
+ .Cross:after {
+   transform: rotate(-45deg);
+ }

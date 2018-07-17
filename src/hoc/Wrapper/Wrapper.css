@@ -1,0 +1,21 @@
+.Container {
+   width: 100%;
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   -ms-border-radius: 5px;
+   -o-border-radius: 5px;
+   box-sizing: border-box;
+   padding: 1rem 1rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   flex-wrap: wrap;   
+}
+
+@media only screen and (max-width: 950px) {
+   .Container {
+      flex-direction: column;
+      justify-content: center;
+   }
+ }

@@ -1,0 +1,83 @@
+.PhotoContainer {
+   height: 30rem;
+   border-radius: 50%;
+   overflow: hidden;
+   border: 3px solid orange;
+   margin: 4rem 4rem;
+   align-self: center;
+}
+
+.PhotoContainer img {
+   height: 30rem;
+   transform: scale(1.5) translate(-5rem, 5rem);
+   -webkit-transform: scale(1.5) translate(-5rem, 5rem);
+   -moz-transform: scale(1.5) translate(-5rem, 5rem);
+   -ms-transform: scale(1.5) translate(-5rem, 5rem);
+   -o-transform: scale(1.5) translate(-5rem, 5rem);
+}
+
+.Text {
+   width: 50%;
+   min-height: 40rem;
+   padding: 0 6rem;
+   box-shadow: 2px 2px 5px orange;
+   background-color: rgba(255, 255, 255, 0.5);
+   align-self: center;
+   position: relative;
+}
+
+.Text h2 {
+   font-size: 3rem;
+   text-align: center;
+   padding-bottom: 1rem;
+   border-bottom: 3px solid orange;
+   margin-bottom: 4rem;
+}
+
+.Text p {
+   font-size: 1.5rem;
+   text-align: center;
+   font-weight: 600;
+   line-height: 2.5rem;
+   white-space: pre-line;
+}
+
+.buttonContainer {
+   position: absolute;
+   bottom: 2rem;
+   width: 80%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin: 0 auto;
+}
+
+.buttonContainerMobile {
+   width: 70%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0 auto;
+}
+
+@media only screen and (max-width: 1290px) {
+   .PhotoContainer {
+      height: 20rem;
+   }
+   .PhotoContainer img {
+      height: 20rem;
+      transform: scale(1.8) translate(-3.5rem, 3.5rem);
+      -webkit-transform: scale(1.8) translate(-3.5rem, 3.5rem);
+      -moz-transform: scale(1.8) translate(-3.5rem, 3.5rem);
+      -ms-transform: scale(1.8) translate(-3.5rem, 3.5rem);
+      -o-transform: scale(1.8) translate(-3.5rem, 3.5rem);
+   }
+}
+
+@media only screen and (max-width: 610px) {
+   .buttonContainerMobile button{
+      width: 10rem;
+      height: 4rem;
+      font-size: 2rem;
+   }
+}
