@@ -9,11 +9,11 @@ const contact = () => {
          <form className={classes.Form}>
             <div className={classes.formGroup}>
                <label className={classes.Label}>Name</label>
-               <input className={classes.Input} name="name" type="text" />
+               <input className={classes.Input} required name="name" type="text" />
             </div>
             <div className={classes.formGroup}>
                <label className={classes.Label}>E-mail</label>
-               <input className={classes.Input} name="email" type="email" />
+               <input className={classes.Input} required name="email" type="email" />
             </div>
             <div className={classes.formGroup}>
                <label className={classes.Label}>Company</label>
@@ -22,7 +22,7 @@ const contact = () => {
             <div className={classes.formGroupTextArea}>
                <label className={classes.Label}>Message</label>
                <div>
-                  <textarea />
+                  <textarea required />
                </div>
             </div>
             <button type="submit" className={classes.Submit}>
@@ -32,7 +32,7 @@ const contact = () => {
          <div className={classes.contactInfo}>
             <div className={classes.contactInfoRow}>
                <a href="tel:+48606114405">
-                  <i class="fas fa-phone" />
+                  <i className="fas fa-phone" />
                </a>
                <p>
                   <a href="tel:+48606114405">+48 606 114 405</a>
@@ -40,7 +40,7 @@ const contact = () => {
             </div>
             <div className={classes.contactInfoRow}>
                <a href="mailto: b.w.pieczynski@gmail.com">
-                  <i class="fas fa-envelope-open" />
+                  <i className="fas fa-envelope-open" />
                </a>
                <p>
                   <a href="mailto: b.w.pieczynski@gmail.com">
@@ -50,7 +50,7 @@ const contact = () => {
             </div>
             <div className={classes.contactInfoRow}>
                <a href="https://www.linkedin.com/in/bpieczynski/">
-                  <i class="fab fa-linkedin" />
+                  <i className="fab fa-linkedin" />
                </a>
                <p>
                   <a href="https://www.linkedin.com/in/bpieczynski/">
