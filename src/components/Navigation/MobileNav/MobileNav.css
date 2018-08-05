@@ -1,0 +1,114 @@
+.MobileNav {
+   height: 100%;
+   width: 45%;
+   background: rgba(255, 255, 255, 0.9);
+   position: fixed;
+   float: left;
+   z-index: 100;
+   box-shadow: 2px 0 5px orange;
+   display: flex;
+   flex-direction: column;
+   left: -47%;
+   transition: all 1s;
+   -webkit-transition: all 1s;
+   -moz-transition: all 1s;
+   -ms-transition: all 1s;
+   -o-transition: all 1s;
+   align-items: center;
+   justify-content: center;
+}
+
+.MobileNav ul {
+   text-align: center;
+   list-style: none;
+   padding: 0;
+   min-height: 40%;
+   display:flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.NavLink a {
+   text-decoration: none;
+   position: relative;
+   color: black;
+   font-weight: 600;
+   font-size: 3.5rem;
+   box-sizing: border-box;
+   padding-bottom: 3px;
+   transition: color .5s, border-color .5s;
+   -webkit-transition: color .5s, border-color .5s;
+   -moz-transition: color .5s, border-color .5s;
+   -ms-transition: color .5s, border-color .5s;
+   -o-transition: color .5s, border-color .5s;
+}
+
+.NavLink a:before {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 2px;
+   bottom: -2px;
+   left: 0;
+   background-color: orange;
+   visibility: hidden;
+   -webkit-transform: scaleX(0);
+   transform: scaleX(0);
+   -webkit-transition: all 0.3s ease-in-out 0s;
+   transition: all 0.3s ease-in-out 0s;
+   -moz-transition: all 0.3s ease-in-out 0s;
+   -ms-transition: all 0.3s ease-in-out 0s;
+   -o-transition: all 0.3s ease-in-out 0s;
+}
+
+.NavLink a:hover:before {
+   visibility: visible;
+   -webkit-transform: scaleX(1);
+   transform: scaleX(1);
+   -moz-transform: scaleX(1);
+   -ms-transform: scaleX(1);
+   -o-transform: scaleX(1);
+}
+
+.NavLink a:hover,
+.NavLink a:active {
+   color: orange!important;
+}
+
+.socialMedia {
+   width: 70%;
+   height: 20rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 3rem;
+   justify-content: space-around;
+}
+
+.socialMedia a {
+   text-decoration: none;
+   color: initial;
+}
+
+.socialMedia i{
+   font-size: 4rem;
+}
+
+.Home {
+   color: black;
+   font-size: 3.5rem;
+}
+
+@media only screen and (min-width: 699px) {
+   .MobileNav {
+      display: none;
+   }
+}
+
+@media only screen and (min-width: 500px) {
+   .socialMedia {
+      flex-direction: row;
+      margin-top: 2rem;
+      height: initial;
+   }
+}

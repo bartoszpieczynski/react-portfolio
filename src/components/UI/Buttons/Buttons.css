@@ -21,18 +21,18 @@
    cursor: pointer;
 }
 
-.Button:hover{
-   transform: translateY(-6px);
-   -webkit-transform: translateY(-6px);
-   -moz-transform: translateY(-6px);
-   -ms-transform: translateY(-6px);
-   -o-transform: translateY(-6px);
+.Button:hover {
+   transform: translateY(-3px);
+   -webkit-transform: translateY(-3px);
+   -moz-transform: translateY(-3px);
+   -ms-transform: translateY(-3px);
+   -o-transform: translateY(-3px);
 }
 
-.Button:active {
-   transform: translateY(0);
-   -webkit-transform: translateY(0);
-   -moz-transform: translateY(0);
-   -ms-transform: translateY(0);
-   -o-transform: translateY(0);
+.Button:active{
+   transform: translateY(5px);
+   -webkit-transform: translateY(5px);
+   -moz-transform: translateY(5px);
+   -ms-transform: translateY(5px);
+   -o-transform: translateY(5px);
 }

@@ -79,16 +79,10 @@
 .SocialBar {
    position: absolute;
    width: 8rem;
-   height: 0;
-   top: 4.7rem;
-   z-index: -10;
+   height: 15rem;
+   top: 3.2rem;
    transform:translateX(-25%);
-   background: white;
-   transition: all 1s;
-   -webkit-transition: all 1s;
-   -moz-transition: all 1s;
-   -ms-transition: all 1s;
-   -o-transition: all 1s;
+   background-color: transparent;
    -webkit-transform:translateX(-25%);
    -moz-transform:translateX(-25%);
    -ms-transform:translateX(-25%);
@@ -98,25 +92,34 @@
    align-items: center;
 }
 
-.SocialBar i {
-
+.SocialBar a {
+   position: absolute;
+   top: -200px;
    font-size: 3.5rem;
    color: black;
-   opacity: 0;
-   transition: opacity 1.5s;
-   -webkit-transition: opacity 1.5s;
-   -moz-transition: opacity 1.5s;
-   -ms-transition: opacity 1.5s;
-   -o-transition: opacity 1.5s;
    padding-top: 1rem;
 }
 
-.SocialBar i:hover {
+.SocialBar a:hover {
    color: orange;
 }
 
-.Social:hover .SocialBar i {
-   opacity: 1;
+.Social:hover .SocialBar a:first-child,
+.SocialBar:hover a:first-child {
+   animation: firstIcon .5s linear 1s;
+   -webkit-animation: firstIcon .5s linear 1s;
+   animation-fill-mode: forwards;
+}
+.Social:hover .SocialBar a:nth-child(2),
+.SocialBar:hover a:nth-child(2) {
+   animation: secondIcon .5s linear .5s;
+   -webkit-animation: secondIcon .5s linear .5s;
+   animation-fill-mode: forwards;
+}
+.Social:hover .SocialBar a:last-child {
+   animation: thirdIcon .5s linear;
+   -webkit-animation: thirdIcon .5s linear;
+   animation-fill-mode: forwards;
 }
 
 .Home {
@@ -131,3 +134,23 @@
    color: orange;
 }
 
+@media only screen and (max-width: 699px) {
+   .Navbar {
+      display: none;
+   }
+}
+
+@keyframes firstIcon {
+   from {top: -200px;}
+   to {top: 1.2rem;}
+}
+
+@keyframes secondIcon {
+   from {top: -200px;}
+   to {top: 5.6rem;}
+}
+
+@keyframes thirdIcon {
+   from {top: -200px;}
+   to {top: 9.6rem;}
+}

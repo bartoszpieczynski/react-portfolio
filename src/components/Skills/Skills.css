@@ -53,3 +53,19 @@
 .notHovered {
    opacity: 0.3;
 }
+
+@media only screen and (max-width: 700px) {
+   .svgWrapper {
+      margin: 0 calc(28% - 7.5rem);
+   }
+   .svgWrapper {
+      margin-top: 20px;
+   }
+   .svgWrapper:last-child {
+      margin: 0 auto;
+      padding-bottom: 30px;
+   }
+   .SkillsContainer .Svg {
+      height: 9rem;
+   }
+}

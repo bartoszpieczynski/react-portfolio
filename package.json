@@ -45,6 +45,7 @@
     "react-router-page-transition": "^3.1.0",
     "react-router-transition": "^1.2.1",
     "react-svg": "^4.1.7",
+    "react-touch-events": "^2.1.0",
     "react-transition-group": "^2.4.0",
     "redux": "^4.0.0",
     "resolve": "1.6.0",

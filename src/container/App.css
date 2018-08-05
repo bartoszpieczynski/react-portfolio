@@ -7,23 +7,137 @@
 }
 
 .enter {
-  opacity: 0;
-  transform: translateY(-20px);
-  -webkit-transform: translateY(-20px);
-  -moz-transform: translateY(-20px);
-  -ms-transform: translateY(-20px);
-  -o-transform: translateY(-20px);
-  transition: all .45s ease-out;
-  -webkit-transition: all .45s ease-out;
-  -moz-transition: all .45s ease-out;
-  -ms-transition: all .45s ease-out;
-  -o-transition: all .45s ease-out;
+   opacity: 0;
+   transform: translateY(-20px);
+   -webkit-transform: translateY(-20px);
+   -moz-transform: translateY(-20px);
+   -ms-transform: translateY(-20px);
+   -o-transform: translateY(-20px);
+   transition: all 0.45s ease-out;
+   -webkit-transition: all 0.45s ease-out;
+   -moz-transition: all 0.45s ease-out;
+   -ms-transition: all 0.45s ease-out;
+   -o-transition: all 0.45s ease-out;
 }
 .enterActive {
+   opacity: 1;
+   transform: translateY(0);
+   -webkit-transform: translateY(0);
+   -moz-transform: translateY(0);
+   -ms-transform: translateY(0);
+   -o-transform: translateY(0);
+}
+
+.Hamburger {
+  display: block;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 199;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  max-width: 40px;
+}
+
+.Hamburger input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 200; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+.Hamburger span {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;
+
+   background: #000000;
+   border-radius: 3px;
+
+   z-index: 199;
+
+   transform-origin: 4px 0px;
+
+   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+.Hamburger span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+.Hamburger input:checked ~ span
+{
   opacity: 1;
-  transform: translateY(0);
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+  -webkit-transform: rotate(45deg) translate(-2px, -1px);
+  -moz-transform: rotate(45deg) translate(-2px, -1px);
+  -ms-transform: rotate(45deg) translate(-2px, -1px);
+  -o-transform: rotate(45deg) translate(-2px, -1px);
+}
+
+/*
+ * But let's hide the middle one.
+ */
+.Hamburger input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+  -moz-transform: rotate(0deg) scale(0.2, 0.2);
+  -ms-transform: rotate(0deg) scale(0.2, 0.2);
+  -o-transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+.Hamburger input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+  -webkit-transform: rotate(-45deg) translate(0, -1px);
+  -moz-transform: rotate(-45deg) translate(0, -1px);
+  -ms-transform: rotate(-45deg) translate(0, -1px);
+  -o-transform: rotate(-45deg) translate(0, -1px);
+}
+
+@media only screen and (min-width: 700px) {
+  .Hamburger {
+    display: none;
+  }
+  .Hamburger input {
+    display: none;
+  }
+  .Hamburger span {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 699px) {
+  .AppBody {
+    padding-top: 0;
+  }
 }

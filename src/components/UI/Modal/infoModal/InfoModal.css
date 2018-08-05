@@ -7,7 +7,7 @@
    box-shadow: 2px 2px 5px orange;
    padding: 16px;
    left: 25%;
-   top: 20%;
+   top: 50%;
    box-sizing: border-box;
    transition: all 0.3s ease-out;
 }
@@ -27,9 +27,9 @@
 .Cross {
    position: absolute;
    right: 0;
-   top: -40px;
-   width: 32px;
-   height: 32px;
+   top: -30px;
+   width: 24px;
+   height: 24px;
    opacity: 0.3;
    cursor: pointer;
 }
@@ -38,7 +38,7 @@
    position: absolute;
    left: 15px;
    content: ' ';
-   height: 33px;
+   height: 25px;
    width: 2px;
    background-color: #333;
  }
@@ -50,44 +50,15 @@
    transform: rotate(-45deg);
  }
 
-.Pagination {
-  display: flex;
-  justify-content: center;
-  bottom: 10px;
-  width: 100%;
-}
-
-.Pagination span {
-  text-align: center;
-  margin: 0 1rem;
-  font-size: 1.8rem;
-  width: 2.3rem;
-  height: 2.3rem;
-  border: 2px inset orange;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  cursor: pointer;
-}
-
  @media only screen and (max-width: 700px) {
    .Modal {
      width: 90%;
      left: 5%;
-     top: 10%;
+     top: 40%;
      max-height: 100vh;
      overflow: auto;
-     max-height: 80vh;
    }
    .modalText {
-     font-size: 2rem;
-   }
-   .Container h2 {
-     font-size: 3rem;
-   }
-   .Cross {
-     top: -30px;
+     font-size: 1.8rem;
    }
  }

@@ -20,7 +20,7 @@ class About extends Component {
          `At the end of 2017 I bought some books and online courses and began studying hard.
          Right now I feel confident enough to start my new adventure - React!
          But based on my experience I know that the best way to learn programming is by doing it in real projects, that's why I have sent you my CV.
-         I hope you will give me a chance to prove myself :)`
+         I hope you will give me a chance to prove myself.`
       ],
       activeText: 0
    };
@@ -64,10 +64,10 @@ class About extends Component {
             <MediaQuery maxWidth={699}>
             <div className={classes.buttonContainerMobile}>
                <Buttons fontSize={"3rem"} click={this.prevText}>
-                  &#8678;
+               <i className="fas fa-angle-left"></i>
                </Buttons>
                <Buttons fontSize={"3rem"} click={this.nextText}>
-                  &#8680;
+               <i className="fas fa-angle-right"></i>
                </Buttons>
             </div>
             </MediaQuery>
